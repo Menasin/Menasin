@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 410" width="100%" height="100%">
+  <defs>
+    <linearGradient id="terminalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e14" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .prompt-bracket { fill: #38bdf8; font-weight: 600; }
+    .prompt-user { fill: #00ff66; font-weight: 700; }
+    .prompt-path { fill: #ffffff; font-weight: 600; }
+    .prompt-hash { fill: #f43f5e; font-weight: 700; }
+    .cmd-text { fill: #f0f6fc; font-weight: 600; }
+    .json-bracket { fill: #8b949e; }
+    .json-key { fill: #58a6ff; font-weight: 500; }
+    .json-str { fill: #7ee787; }
+    .json-status { fill: #00ff66; font-weight: 600; }
+    .json-mars { fill: #ff7b72; font-weight: 600; }
+    .json-cyber { fill: #f0883e; }
+    .eof-tag { fill: #e3b341; font-weight: 600; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", "Fira Code", monospace; font-size: 13.5px; }
+  </style>
+
+  <!-- Outer Card Frame with Neon Cyber Accent -->
+  <rect x="1" y="1" width="798" height="408" rx="10" fill="url(#terminalBg)" stroke="#00ff66" stroke-width="1.2" stroke-opacity="0.5" />
+  <rect x="0" y="0" width="800" height="410" rx="10" fill="none" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.15" />
+
+  <!-- Corner Tech Accents -->
+  <path d="M 1 20 L 1 1 L 20 1" stroke="#00ff66" stroke-width="2.5" fill="none" />
+  <path d="M 780 1 L 799 1 L 799 20" stroke="#00ff66" stroke-width="2.5" fill="none" />
+  <path d="M 1 390 L 1 409 L 20 409" stroke="#00ff66" stroke-width="2.5" fill="none" />
+  <path d="M 780 409 L 799 409 L 799 390" stroke="#00ff66" stroke-width="2.5" fill="none" />
+
+  <!-- Terminal Header Bar -->
+  <path d="M 1 10 C 1 5, 5 1, 10 1 L 790 1 C 795 1, 799 5, 799 10 L 799 38 L 1 38 Z" fill="url(#headerGrad)" stroke="#30363d" stroke-width="0.8" />
+
+  <!-- Window Dots -->
+  <circle cx="22" cy="19" r="6" fill="#ff5f56" />
+  <circle cx="42" cy="19" r="6" fill="#ffbd2e" />
+  <circle cx="62" cy="19" r="6" fill="#27c93f" />
+
+  <!-- Window Title -->
+  <text x="400" y="24" text-anchor="middle" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" letter-spacing="0.5">
+    mars-station :: operator@men4sin:~ (zsh)
+  </text>
+
+  <!-- Live Pulse Status -->
+  <circle cx="750" cy="19" r="4" fill="#00ff66">
+    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <text x="760" y="23" fill="#00ff66" font-family="ui-monospace, monospace" font-size="10.5" font-weight="600" letter-spacing="0.5">LIVE</text>
+
+  <!-- Terminal Content Lines -->
+  <g class="mono" transform="translate(24, 65)">
+    <!-- Prompt Line 1 -->
+    <text y="0">
+      <tspan class="prompt-bracket">┌──(</tspan><tspan class="prompt-user">operator㉿mars-station</tspan><tspan class="prompt-bracket">)-[</tspan><tspan class="prompt-path">~</tspan><tspan class="prompt-bracket">]</tspan>
+    </text>
+
+    <!-- Prompt Line 2 & Command -->
+    <text y="24">
+      <tspan class="prompt-hash">└─# </tspan><tspan class="cmd-text">cat &lt;&lt; 'EOF' &gt; system_status.json</tspan>
+    </text>
+
+    <!-- JSON Opening -->
+    <text y="48">
+      <tspan class="json-bracket">{</tspan>
+    </text>
+
+    <!-- operator -->
+    <text y="70">
+      <tspan class="json-key">  "operator": </tspan><tspan class="json-str">"MEN4SIN"</tspan><tspan class="json-bracket">,</tspan>
+    </text>
+
+    <!-- faction -->
+    <text y="92">
+      <tspan class="json-key">  "faction": </tspan><tspan class="json-str">"HXCBFX"</tspan><tspan class="json-bracket">,</tspan>
+    </text>
+
+    <!-- status -->
+    <text y="114">
+      <tspan class="json-key">  "status": </tspan><tspan class="json-status">"System Status: OPTIMAL"</tspan><tspan class="json-bracket">,</tspan>
+    </text>
+
+    <!-- coordinates -->
+    <text y="136">
+      <tspan class="json-key">  "coordinates": </tspan><tspan class="json-mars">"Pinging from Mars 🛰️"</tspan><tspan class="json-bracket">,</tspan>
+    </text>
+
+    <!-- specialization array header -->
+    <text y="158">
+      <tspan class="json-key">  "specialization": </tspan><tspan class="json-bracket">[</tspan>
+    </text>
+
+    <!-- specialization items -->
+    <text y="180">
+      <tspan class="json-str">    "High-Performance Architecture"</tspan><tspan class="json-bracket">,</tspan>
+    </text>
+    <text y="202">
+      <tspan class="json-cyber">    "Offensive &amp; Defensive Cyber"</tspan><tspan class="json-bracket">,</tspan>
+    </text>
+    <text y="224">
+      <tspan class="json-str">    "Distributed Systems &amp; Cloud"</tspan><tspan class="json-bracket">,</tspan>
+    </text>
+    <text y="246">
+      <tspan class="json-cyber">    "DevSecOps &amp; Zero Trust"</tspan>
+    </text>
+
+    <!-- array & json close -->
+    <text y="268">
+      <tspan class="json-bracket">  ]</tspan>
+    </text>
+    <text y="290">
+      <tspan class="json-bracket">}</tspan>
+    </text>
+
+    <!-- EOF -->
+    <text y="312">
+      <tspan class="eof-tag">EOF</tspan>
+    </text>
+
+    <!-- Next Prompt Line -->
+    <text y="334">
+      <tspan class="prompt-bracket">┌──(</tspan><tspan class="prompt-user">operator㉿mars-station</tspan><tspan class="prompt-bracket">)-[</tspan><tspan class="prompt-path">~</tspan><tspan class="prompt-bracket">]</tspan>
+    </text>
+    <text y="354">
+      <tspan class="prompt-hash">└─# </tspan><tspan fill="#00ff66">█</tspan>
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+    </text>
+  </g>
+</svg>
