@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 110" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a0e" />
+      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#070a0e" />
+    </linearGradient>
+
+    <!-- Matrix Stream Gradient (Fades to bright head) -->
+    <linearGradient id="matrixStream" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ff66" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00cc55" stop-opacity="0.25" />
+      <stop offset="85%" stop-color="#00ff66" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#a6ffcc" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Center Vignette to make text ultra-readable -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#0d1117" stop-opacity="0.75" />
+      <stop offset="60%" stop-color="#0d1117" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#070a0e" stop-opacity="0.85" />
+    </radialGradient>
+
+    <!-- Text Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Typing Paths for SMIL animation -->
+    <path id="path0">
+      <animate id="d0" attributeName="d" begin="0s;d4.end" dur="3200ms" fill="remove"
+        values="m0,58 h0 ; m0,58 h800 ; m0,58 h800 ; m0,58 h0" keyTimes="0;0.58;0.86;1" />
+    </path>
+    <path id="path1">
+      <animate id="d1" attributeName="d" begin="d0.end" dur="3200ms" fill="remove"
+        values="m0,58 h0 ; m0,58 h800 ; m0,58 h800 ; m0,58 h0" keyTimes="0;0.58;0.86;1" />
+    </path>
+    <path id="path2">
+      <animate id="d2" attributeName="d" begin="d1.end" dur="3200ms" fill="remove"
+        values="m0,58 h0 ; m0,58 h800 ; m0,58 h800 ; m0,58 h0" keyTimes="0;0.58;0.86;1" />
+    </path>
+    <path id="path3">
+      <animate id="d3" attributeName="d" begin="d2.end" dur="3200ms" fill="remove"
+        values="m0,58 h0 ; m0,58 h800 ; m0,58 h800 ; m0,58 h0" keyTimes="0;0.58;0.86;1" />
+    </path>
+    <path id="path4">
+      <animate id="d4" attributeName="d" begin="d3.end" dur="3200ms" fill="remove"
+        values="m0,58 h0 ; m0,58 h800 ; m0,58 h800 ; m0,58 h0" keyTimes="0;0.58;0.86;1" />
+    </path>
+  </defs>
+
+  <style>
+    .matrix-text {
+      font-family: ui-monospace, Consolas, "Fira Code", monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      fill: url(#matrixStream);
+      user-select: none;
+    }
+    .typing-text {
+      font-family: ui-monospace, "Fira Code", SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      fill: #00FF66;
+    }
+  </style>
+
+  <!-- Container Box with Cyber Border -->
+  <rect x="1" y="1" width="798" height="108" rx="8" fill="url(#bgGrad)" stroke="#00ff66" stroke-width="1" stroke-opacity="0.35" />
+  
+  <!-- Corner Tech Highlights -->
+  <path d="M 1 14 L 1 1 L 14 1" stroke="#00ff66" stroke-width="2" fill="none" />
+  <path d="M 786 1 L 799 1 L 799 14" stroke="#00ff66" stroke-width="2" fill="none" />
+  <path d="M 1 96 L 1 109 L 14 109" stroke="#00ff66" stroke-width="2" fill="none" />
+  <path d="M 786 109 L 799 109 L 799 96" stroke="#00ff66" stroke-width="2" fill="none" />
+
+  <!-- Matrix Digital Rain Layer (Background Animation) -->
+  <g opacity="0.38">
+    <!-- Col 1 -->
+    <g transform="translate(30, -80)">
+      <text class="matrix-text" x="0" y="0">01011001010101</text>
+      <animateTransform attributeName="transform" type="translate" values="30,-120; 30,130" dur="2.4s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 2 -->
+    <g transform="translate(70, -60)">
+      <text class="matrix-text" x="0" y="0">HXCB7F4A901CDE</text>
+      <animateTransform attributeName="transform" type="translate" values="70,-140; 70,130" dur="3.1s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 3 -->
+    <g transform="translate(110, -100)">
+      <text class="matrix-text" x="0" y="0">10110100101011</text>
+      <animateTransform attributeName="transform" type="translate" values="110,-110; 110,130" dur="2.1s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 4 -->
+    <g transform="translate(155, -40)">
+      <text class="matrix-text" x="0" y="0">MARS0X88FF4401</text>
+      <animateTransform attributeName="transform" type="translate" values="155,-130; 155,130" dur="2.7s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 5 -->
+    <g transform="translate(200, -90)">
+      <text class="matrix-text" x="0" y="0">01001011101010</text>
+      <animateTransform attributeName="transform" type="translate" values="200,-150; 200,130" dur="3.5s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 6 -->
+    <g transform="translate(250, -50)">
+      <text class="matrix-text" x="0" y="0">MEN4SIN98A44FE</text>
+      <animateTransform attributeName="transform" type="translate" values="250,-120; 250,130" dur="2.3s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 7 -->
+    <g transform="translate(300, -110)">
+      <text class="matrix-text" x="0" y="0">11010010110100</text>
+      <animateTransform attributeName="transform" type="translate" values="300,-140; 300,130" dur="3.8s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 8 -->
+    <g transform="translate(350, -70)">
+      <text class="matrix-text" x="0" y="0">01011010101101</text>
+      <animateTransform attributeName="transform" type="translate" values="350,-110; 350,130" dur="2.5s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 9 -->
+    <g transform="translate(400, -100)">
+      <text class="matrix-text" x="0" y="0">HXCBFX8801994A</text>
+      <animateTransform attributeName="transform" type="translate" values="400,-130; 400,130" dur="3.3s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 10 -->
+    <g transform="translate(450, -40)">
+      <text class="matrix-text" x="0" y="0">00101101001101</text>
+      <animateTransform attributeName="transform" type="translate" values="450,-120; 450,130" dur="2.2s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 11 -->
+    <g transform="translate(500, -80)">
+      <text class="matrix-text" x="0" y="0">ZEROTRUST0XFF4</text>
+      <animateTransform attributeName="transform" type="translate" values="500,-150; 500,130" dur="3.6s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 12 -->
+    <g transform="translate(550, -60)">
+      <text class="matrix-text" x="0" y="0">10110101001011</text>
+      <animateTransform attributeName="transform" type="translate" values="550,-110; 550,130" dur="2.6s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 13 -->
+    <g transform="translate(600, -90)">
+      <text class="matrix-text" x="0" y="0">SYSARCH9988FEA</text>
+      <animateTransform attributeName="transform" type="translate" values="600,-140; 600,130" dur="3.2s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 14 -->
+    <g transform="translate(650, -50)">
+      <text class="matrix-text" x="0" y="0">01010110010101</text>
+      <animateTransform attributeName="transform" type="translate" values="650,-120; 650,130" dur="2.4s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 15 -->
+    <g transform="translate(700, -80)">
+      <text class="matrix-text" x="0" y="0">HXCB00FF660144</text>
+      <animateTransform attributeName="transform" type="translate" values="700,-130; 700,130" dur="2.9s" repeatCount="indefinite" />
+    </g>
+    <!-- Col 16 -->
+    <g transform="translate(750, -60)">
+      <text class="matrix-text" x="0" y="0">10101101001010</text>
+      <animateTransform attributeName="transform" type="translate" values="750,-110; 750,130" dur="2.3s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <!-- Dark Center Vignette for Crystal Clear Text Readability -->
+  <rect x="2" y="2" width="796" height="106" rx="7" fill="url(#vignette)" />
+
+  <!-- Animated Typing Text Layers -->
+  <g class="typing-text" filter="url(#neonGlow)">
+    <!-- Line 0 -->
+    <text x="50%" text-anchor="middle" dominant-baseline="middle">
+      <textPath xlink:href="#path0">&gt; INITIALIZING NEURAL_LINK...</textPath>
+    </text>
+    <!-- Line 1 -->
+    <text x="50%" text-anchor="middle" dominant-baseline="middle">
+      <textPath xlink:href="#path1">&gt; CONNECTED TO MARS ORBITAL STATION</textPath>
+    </text>
+    <!-- Line 2 -->
+    <text x="50%" text-anchor="middle" dominant-baseline="middle">
+      <textPath xlink:href="#path2">&gt; SENIOR FULL-STACK ARCHITECT</textPath>
+    </text>
+    <!-- Line 3 -->
+    <text x="50%" text-anchor="middle" dominant-baseline="middle">
+      <textPath xlink:href="#path3">&gt; CYBER ENGINEER &amp; SECURITY RESEARCHER</textPath>
+    </text>
+    <!-- Line 4 -->
+    <text x="50%" text-anchor="middle" dominant-baseline="middle">
+      <textPath xlink:href="#path4">&gt; ZERO TRUST. MAXIMUM RESILIENCE.</textPath>
+    </text>
+  </g>
+</svg>

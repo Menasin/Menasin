@@ -1,14 +1,27 @@
 <div align="center">
 
-  <!-- Hacker Terminal Typing SVG -->
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2500&pause=1000&color=00FF66&center=true&vCenter=true&width=620&lines=%3E+INITIALIZING+NEURAL_LINK...;%3E+CONNECTED+TO+MARS+ORBITAL+STATION;%3E+SENIOR+FULL-STACK+ARCHITECT;%3E+CYBER+ENGINEER+%26+SECURITY+RESEARCHER;%3E+ZERO+TRUST.+MAXIMUM+RESILIENCE." alt="Cyber Terminal Output" />
-  </a>
+  <!-- Header: Cyber Matrix Digital Rain & Neural Typing Animation -->
+  <img src="./assets/header.svg" alt="Cyber Matrix Neural Link" width="100%" />
 
   <br/><br/>
 
-  <!-- High-Visual Vector Terminal HUD -->
+  <!-- Center: High-Visual Vector Terminal HUD -->
   <img src="./assets/terminal.svg" alt="System Status Terminal" width="100%" />
+
+  <br/><br/>
+
+  <!-- Footer Links: Blurry Glassmorphic Uplink Buttons -->
+  <a href="https://github.com/Menasin" target="_blank">
+    <img src="./assets/btn_website.svg" alt="Website // In Orbit" width="250" />
+  </a>
+  &nbsp;
+  <a href="https://instagram.com/men4sin" target="_blank">
+    <img src="./assets/btn_instagram.svg" alt="Instagram // men4sin" width="250" />
+  </a>
+  &nbsp;
+  <a href="https://youtube.com/@Men4sin" target="_blank">
+    <img src="./assets/btn_youtube.svg" alt="YouTube // @Men4sin" width="250" />
+  </a>
 
   <br/><br/>
 

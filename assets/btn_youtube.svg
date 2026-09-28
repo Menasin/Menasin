@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 54" width="250" height="54">
+  <defs>
+    <!-- Glassmorphic Background Gradient -->
+    <linearGradient id="glassBgYT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281313" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#110707" stop-opacity="0.92" />
+    </linearGradient>
+
+    <!-- Frosted Glass Rim / Border Gradient -->
+    <linearGradient id="glassBorderYT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3333" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#ff0000" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.15" />
+    </linearGradient>
+
+    <!-- Top Gloss Reflection -->
+    <linearGradient id="glassGlossYT" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="ytGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Button Glass Base -->
+  <rect x="2" y="2" width="246" height="50" rx="10" fill="url(#glassBgYT)" stroke="url(#glassBorderYT)" stroke-width="1.2" />
+
+  <!-- Top Gloss Highlight Strip -->
+  <path d="M 3 12 C 3 6, 7 3, 13 3 L 237 3 C 243 3, 247 6, 247 12 L 247 22 L 3 22 Z" fill="url(#glassGlossYT)" opacity="0.6" />
+
+  <!-- Corner Tech Accent Dots -->
+  <circle cx="8" cy="8" r="1.5" fill="#ff3333" opacity="0.8" />
+  <circle cx="242" cy="8" r="1.5" fill="#ff3333" opacity="0.8" />
+
+  <!-- YouTube Play Glyph Icon -->
+  <g transform="translate(18, 14)" filter="url(#ytGlow)">
+    <rect x="1" y="3" width="24" height="20" rx="6" fill="#ff0000" />
+    <polygon points="10,8 18,13 10,18" fill="#ffffff" />
+  </g>
+
+  <!-- Text Container -->
+  <g transform="translate(54, 21)" font-family="ui-monospace, SFMono-Regular, 'Fira Code', Menlo, Consolas, monospace">
+    <!-- Subtitle / Status -->
+    <text x="0" y="0" font-size="9" fill="#ff6b6b" font-weight="700" letter-spacing="1.2">BROADCAST // STREAM</text>
+    <!-- Main Label -->
+    <text x="0" y="17" font-size="12.5" fill="#f0f6fc" font-weight="600" letter-spacing="0.4">@Men4sin</text>
+  </g>
+
+  <!-- Arrow Indicator -->
+  <path d="M 226 27 L 232 27 M 229 24 L 232 27 L 229 30" stroke="#ff3333" stroke-width="1.5" fill="none" opacity="0.7" />
+</svg>
