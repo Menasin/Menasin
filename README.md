@@ -10,6 +10,11 @@
 
   <br/><br/>
 
+  <!-- Automated Streak Telemetry (Total, Current, Longest) -->
+  <img src="https://streak-stats.demolab.com?user=Menasin&theme=dark&background=0D1117&ring=00FF66&fire=00FF66&currStreakLabel=00FF66&border=21262D&border_radius=8" alt="Streak Telemetry" />
+
+  <br/><br/>
+
   <!-- Footer Links: Blurry Glassmorphic Uplink Buttons -->
   <a href="https://github.com/Menasin" target="_blank">
     <img src="./assets/btn_website.svg" alt="Website // In Orbit" width="250" />
