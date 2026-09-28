@@ -1,13 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="100%" height="100%">
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="terminalBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0e14" />
-      <stop offset="100%" stop-color="#0d1117" />
+      <stop offset="0%" stop-color="#070a0e" />
+      <stop offset="50%" stop-color="#0a0f16" />
+      <stop offset="100%" stop-color="#06090d" />
     </linearGradient>
+
+    <!-- Header Gradient -->
     <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#161b22" />
       <stop offset="100%" stop-color="#0d1117" />
     </linearGradient>
+
+    <!-- Glowing Divider Gradient -->
+    <linearGradient id="dividerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ff66" stop-opacity="0" />
+      <stop offset="20%" stop-color="#00ff66" stop-opacity="0.3" />
+      <stop offset="80%" stop-color="#00e5ff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Scanline Pattern for Authentic CRT/Cyber Terminal Texture -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.2" opacity="0.25" />
+    </pattern>
   </defs>
 
   <style>
@@ -23,12 +40,21 @@
     .json-mars { fill: #ff7b72; font-weight: 600; }
     .json-cyber { fill: #f0883e; }
     .eof-tag { fill: #e3b341; font-weight: 600; }
-    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", "Fira Code", monospace; font-size: 13.5px; }
+    .hud-title { fill: #00e5ff; font-weight: 700; letter-spacing: 1px; }
+    .hud-label { fill: #8b949e; font-weight: 500; }
+    .hud-val { fill: #f0f6fc; font-weight: 600; }
+    .hud-green { fill: #00ff66; font-weight: 700; }
+    .hud-bar { fill: #00ff66; }
+    .hud-bar-empty { fill: #21262d; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", "Fira Code", monospace; font-size: 13px; }
   </style>
 
   <!-- Outer Card Frame with Neon Cyber Accent -->
-  <rect x="1" y="1" width="798" height="458" rx="10" fill="url(#terminalBg)" stroke="#00ff66" stroke-width="1.2" stroke-opacity="0.5" />
-  <rect x="0" y="0" width="800" height="460" rx="10" fill="none" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.15" />
+  <rect x="1" y="1" width="798" height="458" rx="10" fill="url(#terminalBg)" stroke="#00ff66" stroke-width="1.2" stroke-opacity="0.45" />
+  <rect x="0" y="0" width="800" height="460" rx="10" fill="none" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.12" />
+
+  <!-- Subtle CRT Scanline Texture Layer -->
+  <rect x="2" y="38" width="796" height="420" fill="url(#scanlines)" pointer-events="none" />
 
   <!-- Corner Tech Accents -->
   <path d="M 1 20 L 1 1 L 20 1" stroke="#00ff66" stroke-width="2.5" fill="none" />
@@ -50,13 +76,16 @@
   </text>
 
   <!-- Live Pulse Status -->
-  <circle cx="750" cy="19" r="4" fill="#00ff66">
+  <circle cx="748" cy="19" r="4" fill="#00ff66">
     <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
   </circle>
-  <text x="760" y="23" fill="#00ff66" font-family="ui-monospace, monospace" font-size="10.5" font-weight="600" letter-spacing="0.5">LIVE</text>
+  <text x="758" y="23" fill="#00ff66" font-family="ui-monospace, monospace" font-size="10.5" font-weight="600" letter-spacing="0.5">LIVE</text>
 
-  <!-- Terminal Content Lines -->
-  <g class="mono" transform="translate(26, 64)">
+  <!-- Vertical Divider Separating Left Shell and Right Telemetry HUD -->
+  <line x1="435" y1="55" x2="435" y2="430" stroke="url(#dividerGrad)" stroke-width="1.2" stroke-dasharray="4,4" />
+
+  <!-- LEFT SECTION: Kali Shell & JSON Heredoc -->
+  <g class="mono" transform="translate(24, 64)">
     <!-- Prompt Line 1 -->
     <text y="0">
       <tspan class="prompt-bracket">┌──(</tspan><tspan class="prompt-user">operator㉿mars-station</tspan><tspan class="prompt-bracket">)-[</tspan><tspan class="prompt-path">~</tspan><tspan class="prompt-bracket">]</tspan>
@@ -64,7 +93,7 @@
 
     <!-- Prompt Line 2 & Command -->
     <text y="23">
-      <tspan class="prompt-hash">└─# </tspan><tspan class="cmd-text">cat &lt;&lt; 'EOF' &gt; system_status.json</tspan>
+      <tspan class="prompt-hash">└─# </tspan><tspan class="cmd-text">cat &lt;&lt; 'EOF' &gt; status.json</tspan>
     </text>
 
     <!-- JSON Opening -->
@@ -84,12 +113,12 @@
 
     <!-- status -->
     <text y="112">
-      <tspan class="json-key">  "status": </tspan><tspan class="json-status">"System Status: OPTIMAL"</tspan><tspan class="json-bracket">,</tspan>
+      <tspan class="json-key">  "status": </tspan><tspan class="json-status">"Status: OPTIMAL"</tspan><tspan class="json-bracket">,</tspan>
     </text>
 
     <!-- coordinates -->
     <text y="134">
-      <tspan class="json-key">  "coordinates": </tspan><tspan class="json-mars">"Pinging from Mars 🛰️"</tspan><tspan class="json-bracket">,</tspan>
+      <tspan class="json-key">  "coordinates": </tspan><tspan class="json-mars">"Pinging Mars 🛰️"</tspan><tspan class="json-bracket">,</tspan>
     </text>
 
     <!-- specialization array header -->
@@ -99,16 +128,16 @@
 
     <!-- specialization items -->
     <text y="178">
-      <tspan class="json-str">    "High-Performance Architecture"</tspan><tspan class="json-bracket">,</tspan>
+      <tspan class="json-str">    "High-Perf Architecture"</tspan><tspan class="json-bracket">,</tspan>
     </text>
     <text y="200">
-      <tspan class="json-cyber">    "Offensive &amp; Defensive Cyber"</tspan><tspan class="json-bracket">,</tspan>
+      <tspan class="json-cyber">    "Offensive/Defensive Cyber"</tspan><tspan class="json-bracket">,</tspan>
     </text>
     <text y="222">
-      <tspan class="json-str">    "Distributed Systems &amp; Cloud"</tspan><tspan class="json-bracket">,</tspan>
+      <tspan class="json-str">    "Distributed Systems"</tspan><tspan class="json-bracket">,</tspan>
     </text>
     <text y="244">
-      <tspan class="json-cyber">    "DevSecOps &amp; Zero Trust"</tspan>
+      <tspan class="json-cyber">    "Zero Trust &amp; DevSecOps"</tspan>
     </text>
 
     <!-- array & json close -->
@@ -124,7 +153,7 @@
       <tspan class="eof-tag">EOF</tspan>
     </text>
 
-    <!-- Next Prompt Lines (Cleanly padded from bottom border) -->
+    <!-- Next Prompt Line -->
     <text y="334">
       <tspan class="prompt-bracket">┌──(</tspan><tspan class="prompt-user">operator㉿mars-station</tspan><tspan class="prompt-bracket">)-[</tspan><tspan class="prompt-path">~</tspan><tspan class="prompt-bracket">]</tspan>
     </text>
@@ -132,5 +161,58 @@
       <tspan class="prompt-hash">└─# </tspan><tspan fill="#00ff66">█</tspan>
       <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
     </text>
+  </g>
+
+  <!-- RIGHT SECTION: Telemetry Mission Control & Hardened Specs HUD -->
+  <g class="mono" transform="translate(458, 64)">
+    <!-- HUD Header Box -->
+    <rect x="0" y="0" width="318" height="28" rx="5" fill="#121820" stroke="#00e5ff" stroke-width="0.8" stroke-opacity="0.4" />
+    <circle cx="14" cy="14" r="3.5" fill="#00e5ff" />
+    <text x="26" y="18" class="hud-title" font-size="11.5">STATION TELEMETRY // MARS</text>
+
+    <!-- Key Metrics Grid -->
+    <g transform="translate(4, 48)" font-size="12">
+      <text y="0">
+        <tspan class="hud-label">TARGET : </tspan><tspan class="hud-val">hx-cb.network</tspan>
+      </text>
+      <text y="22">
+        <tspan class="hud-label">KERNEL : </tspan><tspan class="hud-val">6.10-hardened-sec</tspan>
+      </text>
+      <text y="44">
+        <tspan class="hud-label">POLICY : </tspan><tspan class="hud-green">ZERO TRUST [ACTIVE]</tspan>
+      </text>
+      <text y="66">
+        <tspan class="hud-label">CIPHER : </tspan><tspan class="hud-val">AES-256-GCM / TLS1.3</tspan>
+      </text>
+      <text y="88">
+        <tspan class="hud-label">UPLINK : </tspan><tspan class="hud-green">99.99% ULTRA-LOW</tspan>
+      </text>
+    </g>
+
+    <!-- Sub-Box: Neural Grid Load Meters -->
+    <g transform="translate(0, 164)">
+      <rect x="0" y="0" width="318" height="154" rx="6" fill="#0c1117" stroke="#21262d" stroke-width="1" />
+      
+      <!-- Sub-header -->
+      <text x="14" y="22" fill="#58a6ff" font-size="11" font-weight="700" letter-spacing="1">SYSTEM RESOURCES</text>
+      <line x1="14" y1="30" x2="304" y2="30" stroke="#21262d" stroke-width="0.8" />
+
+      <!-- Metric 1: Core Processing -->
+      <text x="14" y="50" font-size="11" class="hud-label">CORE ARCHITECTURE</text>
+      <text x="268" y="50" font-size="11" class="hud-green">94%</text>
+      <text x="14" y="66" font-size="11">
+        <tspan class="hud-bar">■■■■■■■■■■■■■■■■■■■</tspan><tspan class="hud-bar-empty">■</tspan>
+      </text>
+
+      <!-- Metric 2: Cyber Shielding -->
+      <text x="14" y="92" font-size="11" class="hud-label">CYBER SHIELD DEFENSE</text>
+      <text x="262" y="92" font-size="11" class="hud-green">100%</text>
+      <text x="14" y="108" font-size="11">
+        <tspan class="hud-bar">■■■■■■■■■■■■■■■■■■■■</tspan>
+      </text>
+
+      <!-- Metric 3: Mars Uplink Sync -->
+      <text x="14" y="132" font-size="10.5" fill="#8b949e">BEACON: <tspan fill="#39d353">SYNCHRONIZED</tspan> • <tspan fill="#f0883e">MARS-01</tspan></text>
+    </g>
   </g>
 </svg>
