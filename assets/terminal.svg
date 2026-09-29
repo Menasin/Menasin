@@ -47,6 +47,12 @@
     .hud-bar { fill: #00ff66; }
     .hud-bar-empty { fill: #21262d; }
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", "Fira Code", monospace; font-size: 13px; }
+  
+    .mono-char {
+      font-family: ui-monospace, "Fira Code", Consolas, "Courier New", monospace;
+      font-size: 12px;
+      font-weight: 600;
+    }
   </style>
 
   <!-- Outer Card Frame with Neon Cyber Accent -->
@@ -55,6 +61,289 @@
 
   <!-- Subtle CRT Scanline Texture Layer -->
   <rect x="2" y="38" width="796" height="420" fill="url(#scanlines)" pointer-events="none" />
+
+  <!-- MATRIX RAIN BACKGROUND (True Vertical Falling Columns) -->
+  <g class="mono-char" opacity="0.35">
+    <!-- Col 1 (x=25) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.1s" repeatCount="indefinite" begin="-0.3s" />
+      <text x="25" y="0">
+        <tspan x="25" dy="0" fill="#004418">0</tspan>
+        <tspan x="25" dy="13" fill="#007727">1</tspan>
+        <tspan x="25" dy="13" fill="#00aa38">X</tspan>
+        <tspan x="25" dy="13" fill="#00cc44">C</tspan>
+        <tspan x="25" dy="13" fill="#00ff66">B</tspan>
+        <tspan x="25" dy="13" fill="#66ff99">7</tspan>
+        <tspan x="25" dy="13" fill="#ffffff" font-weight="bold">F</tspan>
+      </text>
+    </g>
+
+    <!-- Col 2 (x=60) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="3.0s" repeatCount="indefinite" begin="-1.5s" />
+      <text x="60" y="0">
+        <tspan x="60" dy="0" fill="#004418">1</tspan>
+        <tspan x="60" dy="13" fill="#007727">0</tspan>
+        <tspan x="60" dy="13" fill="#009933">A</tspan>
+        <tspan x="60" dy="13" fill="#00cc44">4</tspan>
+        <tspan x="60" dy="13" fill="#00ff66">9</tspan>
+        <tspan x="60" dy="13" fill="#66ff99">1</tspan>
+        <tspan x="60" dy="13" fill="#ffffff" font-weight="bold">0</tspan>
+      </text>
+    </g>
+
+    <!-- Col 3 (x=95) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.4s" repeatCount="indefinite" begin="-0.8s" />
+      <text x="95" y="0">
+        <tspan x="95" dy="0" fill="#004418">M</tspan>
+        <tspan x="95" dy="13" fill="#007727">A</tspan>
+        <tspan x="95" dy="13" fill="#00aa38">R</tspan>
+        <tspan x="95" dy="13" fill="#00cc44">S</tspan>
+        <tspan x="95" dy="13" fill="#00ff66">0</tspan>
+        <tspan x="95" dy="13" fill="#66ff99">X</tspan>
+        <tspan x="95" dy="13" fill="#ffffff" font-weight="bold">8</tspan>
+      </text>
+    </g>
+
+    <!-- Col 4 (x=130) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="3.3s" repeatCount="indefinite" begin="-2.1s" />
+      <text x="130" y="0">
+        <tspan x="130" dy="0" fill="#004418">0</tspan>
+        <tspan x="130" dy="13" fill="#007727">1</tspan>
+        <tspan x="130" dy="13" fill="#009933">1</tspan>
+        <tspan x="130" dy="13" fill="#00cc44">0</tspan>
+        <tspan x="130" dy="13" fill="#00ff66">1</tspan>
+        <tspan x="130" dy="13" fill="#66ff99">0</tspan>
+        <tspan x="130" dy="13" fill="#ffffff" font-weight="bold">1</tspan>
+      </text>
+    </g>
+
+    <!-- Col 5 (x=165) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.2s" repeatCount="indefinite" begin="-1.0s" />
+      <text x="165" y="0">
+        <tspan x="165" dy="0" fill="#004418">H</tspan>
+        <tspan x="165" dy="13" fill="#007727">X</tspan>
+        <tspan x="165" dy="13" fill="#00aa38">C</tspan>
+        <tspan x="165" dy="13" fill="#00cc44">B</tspan>
+        <tspan x="165" dy="13" fill="#00ff66">F</tspan>
+        <tspan x="165" dy="13" fill="#66ff99">X</tspan>
+        <tspan x="165" dy="13" fill="#ffffff" font-weight="bold">9</tspan>
+      </text>
+    </g>
+
+    <!-- Col 6 (x=205) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.7s" repeatCount="indefinite" begin="-0.4s" />
+      <text x="205" y="0">
+        <tspan x="205" dy="0" fill="#004418">1</tspan>
+        <tspan x="205" dy="13" fill="#007727">0</tspan>
+        <tspan x="205" dy="13" fill="#009933">1</tspan>
+        <tspan x="205" dy="13" fill="#00cc44">1</tspan>
+        <tspan x="205" dy="13" fill="#00ff66">0</tspan>
+        <tspan x="205" dy="13" fill="#66ff99">F</tspan>
+        <tspan x="205" dy="13" fill="#ffffff" font-weight="bold">A</tspan>
+      </text>
+    </g>
+
+    <!-- Col 7 (x=245) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="3.5s" repeatCount="indefinite" begin="-1.8s" />
+      <text x="245" y="0">
+        <tspan x="245" dy="0" fill="#004418">C</tspan>
+        <tspan x="245" dy="13" fill="#007727">Y</tspan>
+        <tspan x="245" dy="13" fill="#00aa38">B</tspan>
+        <tspan x="245" dy="13" fill="#00cc44">E</tspan>
+        <tspan x="245" dy="13" fill="#00ff66">R</tspan>
+        <tspan x="245" dy="13" fill="#66ff99">4</tspan>
+        <tspan x="245" dy="13" fill="#ffffff" font-weight="bold">1</tspan>
+      </text>
+    </g>
+
+    <!-- Col 8 (x=285) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.3s" repeatCount="indefinite" begin="-0.6s" />
+      <text x="285" y="0">
+        <tspan x="285" dy="0" fill="#004418">0</tspan>
+        <tspan x="285" dy="13" fill="#007727">1</tspan>
+        <tspan x="285" dy="13" fill="#00aa38">0</tspan>
+        <tspan x="285" dy="13" fill="#00cc44">0</tspan>
+        <tspan x="285" dy="13" fill="#00ff66">1</tspan>
+        <tspan x="285" dy="13" fill="#66ff99">1</tspan>
+        <tspan x="285" dy="13" fill="#ffffff" font-weight="bold">0</tspan>
+      </text>
+    </g>
+
+    <!-- Col 9 (x=325) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="3.1s" repeatCount="indefinite" begin="-2.4s" />
+      <text x="325" y="0">
+        <tspan x="325" dy="0" fill="#004418">Z</tspan>
+        <tspan x="325" dy="13" fill="#007727">E</tspan>
+        <tspan x="325" dy="13" fill="#00aa38">R</tspan>
+        <tspan x="325" dy="13" fill="#00cc44">O</tspan>
+        <tspan x="325" dy="13" fill="#00ff66">T</tspan>
+        <tspan x="325" dy="13" fill="#66ff99">9</tspan>
+        <tspan x="325" dy="13" fill="#ffffff" font-weight="bold">F</tspan>
+      </text>
+    </g>
+
+    <!-- Col 10 (x=365) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.5s" repeatCount="indefinite" begin="-1.1s" />
+      <text x="365" y="0">
+        <tspan x="365" dy="0" fill="#004418">1</tspan>
+        <tspan x="365" dy="13" fill="#007727">1</tspan>
+        <tspan x="365" dy="13" fill="#009933">0</tspan>
+        <tspan x="365" dy="13" fill="#00cc44">1</tspan>
+        <tspan x="365" dy="13" fill="#00ff66">0</tspan>
+        <tspan x="365" dy="13" fill="#66ff99">1</tspan>
+        <tspan x="365" dy="13" fill="#ffffff" font-weight="bold">1</tspan>
+      </text>
+    </g>
+
+    <!-- Col 11 (x=405) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="3.4s" repeatCount="indefinite" begin="-1.9s" />
+      <text x="405" y="0">
+        <tspan x="405" dy="0" fill="#004418">M</tspan>
+        <tspan x="405" dy="13" fill="#007727">E</tspan>
+        <tspan x="405" dy="13" fill="#00aa38">N</tspan>
+        <tspan x="405" dy="13" fill="#00cc44">4</tspan>
+        <tspan x="405" dy="13" fill="#00ff66">S</tspan>
+        <tspan x="405" dy="13" fill="#66ff99">I</tspan>
+        <tspan x="405" dy="13" fill="#ffffff" font-weight="bold">N</tspan>
+      </text>
+    </g>
+
+    <!-- Col 12 (x=445) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.2s" repeatCount="indefinite" begin="-0.5s" />
+      <text x="445" y="0">
+        <tspan x="445" dy="0" fill="#004418">0</tspan>
+        <tspan x="445" dy="13" fill="#007727">1</tspan>
+        <tspan x="445" dy="13" fill="#009933">0</tspan>
+        <tspan x="445" dy="13" fill="#00cc44">1</tspan>
+        <tspan x="445" dy="13" fill="#00ff66">1</tspan>
+        <tspan x="445" dy="13" fill="#66ff99">0</tspan>
+        <tspan x="445" dy="13" fill="#ffffff" font-weight="bold">0</tspan>
+      </text>
+    </g>
+
+    <!-- Col 13 (x=485) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.9s" repeatCount="indefinite" begin="-1.3s" />
+      <text x="485" y="0">
+        <tspan x="485" dy="0" fill="#004418">A</tspan>
+        <tspan x="485" dy="13" fill="#007727">R</tspan>
+        <tspan x="485" dy="13" fill="#00aa38">C</tspan>
+        <tspan x="485" dy="13" fill="#00cc44">H</tspan>
+        <tspan x="485" dy="13" fill="#00ff66">0</tspan>
+        <tspan x="485" dy="13" fill="#66ff99">X</tspan>
+        <tspan x="485" dy="13" fill="#ffffff" font-weight="bold">F</tspan>
+      </text>
+    </g>
+
+    <!-- Col 14 (x=525) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.4s" repeatCount="indefinite" begin="-0.2s" />
+      <text x="525" y="0">
+        <tspan x="525" dy="0" fill="#004418">1</tspan>
+        <tspan x="525" dy="13" fill="#007727">0</tspan>
+        <tspan x="525" dy="13" fill="#00aa38">0</tspan>
+        <tspan x="525" dy="13" fill="#00cc44">1</tspan>
+        <tspan x="525" dy="13" fill="#00ff66">0</tspan>
+        <tspan x="525" dy="13" fill="#66ff99">1</tspan>
+        <tspan x="525" dy="13" fill="#ffffff" font-weight="bold">1</tspan>
+      </text>
+    </g>
+
+    <!-- Col 15 (x=565) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="3.6s" repeatCount="indefinite" begin="-2.0s" />
+      <text x="565" y="0">
+        <tspan x="565" dy="0" fill="#004418">H</tspan>
+        <tspan x="565" dy="13" fill="#007727">X</tspan>
+        <tspan x="565" dy="13" fill="#00aa38">C</tspan>
+        <tspan x="565" dy="13" fill="#00cc44">B</tspan>
+        <tspan x="565" dy="13" fill="#00ff66">7</tspan>
+        <tspan x="565" dy="13" fill="#66ff99">4</tspan>
+        <tspan x="565" dy="13" fill="#ffffff" font-weight="bold">0</tspan>
+      </text>
+    </g>
+
+    <!-- Col 16 (x=605) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.1s" repeatCount="indefinite" begin="-0.7s" />
+      <text x="605" y="0">
+        <tspan x="605" dy="0" fill="#004418">0</tspan>
+        <tspan x="605" dy="13" fill="#007727">1</tspan>
+        <tspan x="605" dy="13" fill="#009933">1</tspan>
+        <tspan x="605" dy="13" fill="#00cc44">0</tspan>
+        <tspan x="605" dy="13" fill="#00ff66">1</tspan>
+        <tspan x="605" dy="13" fill="#66ff99">1</tspan>
+        <tspan x="605" dy="13" fill="#ffffff" font-weight="bold">1</tspan>
+      </text>
+    </g>
+
+    <!-- Col 17 (x=645) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="3.1s" repeatCount="indefinite" begin="-1.6s" />
+      <text x="645" y="0">
+        <tspan x="645" dy="0" fill="#004418">G</tspan>
+        <tspan x="645" dy="13" fill="#007727">R</tspan>
+        <tspan x="645" dy="13" fill="#00aa38">I</tspan>
+        <tspan x="645" dy="13" fill="#00cc44">D</tspan>
+        <tspan x="645" dy="13" fill="#00ff66">0</tspan>
+        <tspan x="645" dy="13" fill="#66ff99">X</tspan>
+        <tspan x="645" dy="13" fill="#ffffff" font-weight="bold">A</tspan>
+      </text>
+    </g>
+
+    <!-- Col 18 (x=685) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.3s" repeatCount="indefinite" begin="-0.4s" />
+      <text x="685" y="0">
+        <tspan x="685" dy="0" fill="#004418">1</tspan>
+        <tspan x="685" dy="13" fill="#007727">0</tspan>
+        <tspan x="685" dy="13" fill="#00aa38">1</tspan>
+        <tspan x="685" dy="13" fill="#00cc44">1</tspan>
+        <tspan x="685" dy="13" fill="#00ff66">0</tspan>
+        <tspan x="685" dy="13" fill="#66ff99">1</tspan>
+        <tspan x="685" dy="13" fill="#ffffff" font-weight="bold">0</tspan>
+      </text>
+    </g>
+
+    <!-- Col 19 (x=725) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="3.3s" repeatCount="indefinite" begin="-2.2s" />
+      <text x="725" y="0">
+        <tspan x="725" dy="0" fill="#004418">M</tspan>
+        <tspan x="725" dy="13" fill="#007727">A</tspan>
+        <tspan x="725" dy="13" fill="#00aa38">R</tspan>
+        <tspan x="725" dy="13" fill="#00cc44">S</tspan>
+        <tspan x="725" dy="13" fill="#00ff66">9</tspan>
+        <tspan x="725" dy="13" fill="#66ff99">9</tspan>
+        <tspan x="725" dy="13" fill="#ffffff" font-weight="bold">F</tspan>
+      </text>
+    </g>
+
+    <!-- Col 20 (x=765) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-160; 0,480" dur="2.2s" repeatCount="indefinite" begin="-0.9s" />
+      <text x="765" y="0">
+        <tspan x="765" dy="0" fill="#004418">0</tspan>
+        <tspan x="765" dy="13" fill="#007727">1</tspan>
+        <tspan x="765" dy="13" fill="#00aa38">0</tspan>
+        <tspan x="765" dy="13" fill="#00cc44">1</tspan>
+        <tspan x="765" dy="13" fill="#00ff66">1</tspan>
+        <tspan x="765" dy="13" fill="#66ff99">0</tspan>
+        <tspan x="765" dy="13" fill="#ffffff" font-weight="bold">1</tspan>
+      </text>
+    </g>
+  </g>
 
   <!-- Corner Tech Accents -->
   <path d="M 1 20 L 1 1 L 20 1" stroke="#00ff66" stroke-width="2.5" fill="none" />
