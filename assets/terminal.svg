@@ -515,46 +515,106 @@
 
       <!-- Metric 1: Core Processing -->
       <text x="14" y="49" font-size="11" class="hud-label">CORE ARCHITECTURE</text>
-      <!-- Dynamic Fluctuating Percentage (Continuous LCD Crossfade) -->
+      <!-- Dynamic Telemetry Percentage (3x Speed with Tenths & Hundredths) -->
       <g font-size="11" font-weight="700">
-        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
-          90%
-          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8213;0.825;0.8713;0.875;1" dur="80s" repeatCount="indefinite" />
-        </text>
-        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
-          91%
-          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8713;0.875;0.9213;0.925;1" dur="80s" repeatCount="indefinite" />
-        </text>
-        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
-          92%
-          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7712;0.775;0.8213;0.825;1" dur="80s" repeatCount="indefinite" />
-        </text>
-        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
-          93%
-          <animate attributeName="opacity" values="0;0;1;1;0;0;1;1;0;0;1;0" keyTimes="0;0.4213;0.425;0.5088;0.5125;0.6963;0.7;0.7712;0.775;0.9213;0.925;1" dur="80s" repeatCount="indefinite" />
-        </text>
         <text x="304" y="49" text-anchor="end" class="hud-green" opacity="1">
-          94%
-          <animate attributeName="opacity" values="1;1;0;0;1;1;0;0;1;1;0;1" keyTimes="0;0.0713;0.075;0.1588;0.1625;0.2462;0.25;0.5088;0.5125;0.5963;0.6;1" dur="80s" repeatCount="indefinite" />
+          94.18%
+          <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.0407;0.0444;0.9741;0.9778;1" dur="27s" repeatCount="indefinite" />
         </text>
         <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
-          95%
-          <animate attributeName="opacity" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0" keyTimes="0;0.0713;0.075;0.1588;0.1625;0.3337;0.3375;0.4213;0.425;0.5963;0.6;0.6963;0.7;1" dur="80s" repeatCount="indefinite" />
+          94.65%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.0407;0.0444;0.0852;0.0889;1" dur="27s" repeatCount="indefinite" />
         </text>
         <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
-          96%
-          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2462;0.25;0.3337;0.3375;1" dur="80s" repeatCount="indefinite" />
+          95.12%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.0852;0.0889;0.1296;0.1333;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          95.84%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1296;0.1333;0.1815;0.1852;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          96.20%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1815;0.1852;0.2333;0.237;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          95.75%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2333;0.237;0.2778;0.2815;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          95.10%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2778;0.2815;0.3222;0.3259;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          94.42%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3222;0.3259;0.3667;0.3704;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          93.80%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3667;0.3704;0.4111;0.4148;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          94.35%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.4111;0.4148;0.4593;0.463;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          94.90%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.4593;0.463;0.5074;0.5111;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          95.45%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5074;0.5111;0.5519;0.5556;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          94.80%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5519;0.5556;0.5963;0.6;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          93.95%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5963;0.6;0.6444;0.6481;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          93.20%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6444;0.6481;0.6926;0.6963;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          92.45%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6926;0.6963;0.737;0.7407;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          91.30%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.737;0.7407;0.7815;0.7852;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          90.15%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7815;0.7852;0.8259;0.8296;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          90.85%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8259;0.8296;0.8704;0.8741;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          91.90%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8704;0.8741;0.9148;0.9185;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          92.85%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.9148;0.9185;0.9519;0.9556;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          93.70%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.9519;0.9556;0.9741;0.9778;1" dur="27s" repeatCount="indefinite" />
         </text>
       </g>
-      <!-- Core Architecture Vector Cyber Bar -->
+      <!-- Core Architecture Vector Cyber Bar (3x Dynamic Response) -->
       <rect x="14" y="56" width="290" height="7" rx="3.5" fill="#070a0e" stroke="#21262d" stroke-width="0.8" />
       <g>
         <clipPath id="coreBarClip">
           <rect x="14" y="56" width="290" height="7" rx="3.5" />
         </clipPath>
         <g clip-path="url(#coreBarClip)">
-          <rect x="14" y="56" width="272.6" height="7" rx="3.5" fill="url(#barGradCore)">
-            <animate attributeName="width" values="272.6;275.5;272.6;278.4;275.5;269.7;272.6;275.5;269.7;266.8;261.0;263.9;269.7;272.6" keyTimes="0;0.075;0.1625;0.25;0.3375;0.425;0.5125;0.6;0.7;0.775;0.825;0.875;0.925;1" dur="80s" repeatCount="indefinite" />
+          <rect x="14" y="56" width="273.1" height="7" rx="3.5" fill="url(#barGradCore)">
+            <animate attributeName="width" values="273.1;274.5;275.8;277.9;279.0;277.7;275.8;273.8;272.0;273.6;275.2;276.8;274.9;272.5;270.3;268.1;264.8;261.4;263.5;266.5;269.3;271.7;273.1;273.1" keyTimes="0;0.0444;0.0889;0.1333;0.1852;0.237;0.2815;0.3259;0.3704;0.4148;0.463;0.5111;0.5556;0.6;0.6481;0.6963;0.7407;0.7852;0.8296;0.8741;0.9185;0.9556;0.9778;1" dur="27s" repeatCount="indefinite" />
           </rect>
           <!-- Segment dividers overlay (cyber ticks) -->
           <path d="M 28.5 56 v 7 M 43 56 v 7 M 57.5 56 v 7 M 72 56 v 7 M 86.5 56 v 7 M 101 56 v 7 M 115.5 56 v 7 M 130 56 v 7 M 144.5 56 v 7 M 159 56 v 7 M 173.5 56 v 7 M 188 56 v 7 M 202.5 56 v 7 M 217 56 v 7 M 231.5 56 v 7 M 246 56 v 7 M 260.5 56 v 7 M 275 56 v 7 M 289.5 56 v 7" stroke="#070a0e" stroke-width="1.2" opacity="0.6" />
@@ -563,22 +623,66 @@
 
       <!-- Metric 2: Cyber Shielding -->
       <text x="14" y="83" font-size="11" class="hud-label">CYBER SHIELD DEFENSE</text>
-      <!-- Dynamic Fluctuating Percentage (Continuous LCD Crossfade) -->
+      <!-- Dynamic Telemetry Percentage (3x Speed with Tenths & Hundredths) -->
       <g font-size="11" font-weight="700">
-        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
-          98%
-          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8213;0.825;0.8838;0.8875;1" dur="80s" repeatCount="indefinite" />
-        </text>
-        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
-          99%
-          <animate attributeName="opacity" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0" keyTimes="0;0.1212;0.125;0.2462;0.25;0.4338;0.4375;0.5588;0.5625;0.7463;0.75;0.8213;0.825;0.8838;0.8875;0.9463;0.95;1" dur="80s" repeatCount="indefinite" />
-        </text>
         <text x="304" y="83" text-anchor="end" class="hud-green" opacity="1">
-          100%
-          <animate attributeName="opacity" values="1;1;0;0;1;1;0;0;1;1;0;0;1;1" keyTimes="0;0.1212;0.125;0.2462;0.25;0.4338;0.4375;0.5588;0.5625;0.7463;0.75;0.9463;0.95;1" dur="80s" repeatCount="indefinite" />
+          100.00%
+          <animate attributeName="opacity" values="1;1;0;0;1;1;0;0;1;1;0;0;1;1" keyTimes="0;0.0519;0.0556;0.2185;0.2222;0.2926;0.2963;0.5148;0.5185;0.5889;0.5926;0.9741;0.9778;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99.85%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.0519;0.0556;0.1074;0.1111;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99.52%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1074;0.1111;0.163;0.1667;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99.90%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.163;0.1667;0.2185;0.2222;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99.78%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2926;0.2963;0.3667;0.3704;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99.45%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3667;0.3704;0.4407;0.4444;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99.88%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.4407;0.4444;0.5148;0.5185;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99.72%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5889;0.5926;0.663;0.6667;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99.30%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.663;0.6667;0.7185;0.7222;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          98.85%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7185;0.7222;0.7815;0.7852;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          98.05%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7815;0.7852;0.8407;0.8444;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          98.70%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8407;0.8444;0.8926;0.8963;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99.35%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8926;0.8963;0.9444;0.9481;1" dur="27s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99.80%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.9444;0.9481;0.9741;0.9778;1" dur="27s" repeatCount="indefinite" />
         </text>
       </g>
-      <!-- Cyber Shield Progress Bar Track -->
+      <!-- Cyber Shield Progress Bar Track (3x Dynamic Response) -->
       <rect x="14" y="90" width="290" height="7" rx="3.5" fill="#070a0e" stroke="#21262d" stroke-width="0.8" />
       <g>
         <clipPath id="shieldBarClip">
@@ -586,7 +690,7 @@
         </clipPath>
         <g clip-path="url(#shieldBarClip)">
           <rect x="14" y="90" width="290.0" height="7" rx="3.5" fill="url(#barGradShield)">
-            <animate attributeName="width" values="290.0;287.1;290.0;287.1;290.0;287.1;284.2;287.1;290.0;290.0" keyTimes="0;0.125;0.25;0.4375;0.5625;0.75;0.825;0.8875;0.95;1" dur="80s" repeatCount="indefinite" />
+            <animate attributeName="width" values="290.0;289.6;288.6;289.7;290.0;289.4;288.4;289.7;290.0;289.2;288.0;286.7;284.3;286.2;288.1;289.4;290.0;290.0" keyTimes="0;0.0556;0.1111;0.1667;0.2222;0.2963;0.3704;0.4444;0.5185;0.5926;0.6667;0.7222;0.7852;0.8444;0.8963;0.9481;0.9778;1" dur="27s" repeatCount="indefinite" />
           </rect>
           <!-- Segment dividers overlay (cyber ticks) -->
           <path d="M 28.5 90 v 7 M 43 90 v 7 M 57.5 90 v 7 M 72 90 v 7 M 86.5 90 v 7 M 101 90 v 7 M 115.5 90 v 7 M 130 90 v 7 M 144.5 90 v 7 M 159 90 v 7 M 173.5 90 v 7 M 188 90 v 7 M 202.5 90 v 7 M 217 90 v 7 M 231.5 90 v 7 M 246 90 v 7 M 260.5 90 v 7 M 275 90 v 7 M 289.5 90 v 7" stroke="#070a0e" stroke-width="1.2" opacity="0.6" />
