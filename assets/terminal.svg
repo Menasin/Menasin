@@ -25,6 +25,26 @@
     <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
       <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.2" opacity="0.25" />
     </pattern>
+    <!-- Glowing Progress Bar Gradients -->
+    <linearGradient id="barGradCore" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00aa44" />
+      <stop offset="60%" stop-color="#00ff66" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="barGradShield" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#009933" />
+      <stop offset="70%" stop-color="#00ff66" />
+      <stop offset="100%" stop-color="#a7f3d0" />
+    </linearGradient>
+
+    <!-- Beacon & Cyber Lamp Glow Filter -->
+    <filter id="beaconGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
   </defs>
 
   <style>
@@ -364,10 +384,17 @@
     mars-station :: operator@men4sin:~ (zsh)
   </text>
 
-  <!-- Live Pulse Status -->
-  <circle cx="748" cy="19" r="4" fill="#00ff66">
-    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
-  </circle>
+  <!-- Live Pulse Status Lamp -->
+  <g transform="translate(748, 19)">
+    <circle cx="0" cy="0" r="3.5" fill="none" stroke="#00ff66" stroke-width="1.2">
+      <animate attributeName="r" values="3.5;10" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.85;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="4" fill="#00ff66" filter="url(#beaconGlow)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="1.8" fill="#ffffff" />
+  </g>
   <text x="758" y="23" fill="#00ff66" font-family="ui-monospace, monospace" font-size="10.5" font-weight="600" letter-spacing="0.5">LIVE</text>
 
   <!-- Vertical Divider Separating Left Shell and Right Telemetry HUD -->
@@ -487,21 +514,109 @@
       <line x1="14" y1="30" x2="304" y2="30" stroke="#21262d" stroke-width="0.8" />
 
       <!-- Metric 1: Core Processing -->
-      <text x="14" y="50" font-size="11" class="hud-label">CORE ARCHITECTURE</text>
-      <text x="268" y="50" font-size="11" class="hud-green">94%</text>
-      <text x="14" y="66" font-size="11">
-        <tspan class="hud-bar">■■■■■■■■■■■■■■■■■■■</tspan><tspan class="hud-bar-empty">■</tspan>
-      </text>
+      <text x="14" y="49" font-size="11" class="hud-label">CORE ARCHITECTURE</text>
+      <!-- Dynamic Fluctuating Percentage (Continuous LCD Crossfade) -->
+      <g font-size="11" font-weight="700">
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          90%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8213;0.825;0.8713;0.875;1" dur="80s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          91%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8713;0.875;0.9213;0.925;1" dur="80s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          92%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7712;0.775;0.8213;0.825;1" dur="80s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          93%
+          <animate attributeName="opacity" values="0;0;1;1;0;0;1;1;0;0;1;0" keyTimes="0;0.4213;0.425;0.5088;0.5125;0.6963;0.7;0.7712;0.775;0.9213;0.925;1" dur="80s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="1">
+          94%
+          <animate attributeName="opacity" values="1;1;0;0;1;1;0;0;1;1;0;1" keyTimes="0;0.0713;0.075;0.1588;0.1625;0.2462;0.25;0.5088;0.5125;0.5963;0.6;1" dur="80s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          95%
+          <animate attributeName="opacity" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0" keyTimes="0;0.0713;0.075;0.1588;0.1625;0.3337;0.3375;0.4213;0.425;0.5963;0.6;0.6963;0.7;1" dur="80s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="49" text-anchor="end" class="hud-green" opacity="0">
+          96%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2462;0.25;0.3337;0.3375;1" dur="80s" repeatCount="indefinite" />
+        </text>
+      </g>
+      <!-- Core Architecture Vector Cyber Bar -->
+      <rect x="14" y="56" width="290" height="7" rx="3.5" fill="#070a0e" stroke="#21262d" stroke-width="0.8" />
+      <g>
+        <clipPath id="coreBarClip">
+          <rect x="14" y="56" width="290" height="7" rx="3.5" />
+        </clipPath>
+        <g clip-path="url(#coreBarClip)">
+          <rect x="14" y="56" width="272.6" height="7" rx="3.5" fill="url(#barGradCore)">
+            <animate attributeName="width" values="272.6;275.5;272.6;278.4;275.5;269.7;272.6;275.5;269.7;266.8;261.0;263.9;269.7;272.6" keyTimes="0;0.075;0.1625;0.25;0.3375;0.425;0.5125;0.6;0.7;0.775;0.825;0.875;0.925;1" dur="80s" repeatCount="indefinite" />
+          </rect>
+          <!-- Segment dividers overlay (cyber ticks) -->
+          <path d="M 28.5 56 v 7 M 43 56 v 7 M 57.5 56 v 7 M 72 56 v 7 M 86.5 56 v 7 M 101 56 v 7 M 115.5 56 v 7 M 130 56 v 7 M 144.5 56 v 7 M 159 56 v 7 M 173.5 56 v 7 M 188 56 v 7 M 202.5 56 v 7 M 217 56 v 7 M 231.5 56 v 7 M 246 56 v 7 M 260.5 56 v 7 M 275 56 v 7 M 289.5 56 v 7" stroke="#070a0e" stroke-width="1.2" opacity="0.6" />
+        </g>
+      </g>
 
       <!-- Metric 2: Cyber Shielding -->
-      <text x="14" y="92" font-size="11" class="hud-label">CYBER SHIELD DEFENSE</text>
-      <text x="262" y="92" font-size="11" class="hud-green">100%</text>
-      <text x="14" y="108" font-size="11">
-        <tspan class="hud-bar">■■■■■■■■■■■■■■■■■■■■</tspan>
-      </text>
+      <text x="14" y="83" font-size="11" class="hud-label">CYBER SHIELD DEFENSE</text>
+      <!-- Dynamic Fluctuating Percentage (Continuous LCD Crossfade) -->
+      <g font-size="11" font-weight="700">
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          98%
+          <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8213;0.825;0.8838;0.8875;1" dur="80s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="0">
+          99%
+          <animate attributeName="opacity" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0" keyTimes="0;0.1212;0.125;0.2462;0.25;0.4338;0.4375;0.5588;0.5625;0.7463;0.75;0.8213;0.825;0.8838;0.8875;0.9463;0.95;1" dur="80s" repeatCount="indefinite" />
+        </text>
+        <text x="304" y="83" text-anchor="end" class="hud-green" opacity="1">
+          100%
+          <animate attributeName="opacity" values="1;1;0;0;1;1;0;0;1;1;0;0;1;1" keyTimes="0;0.1212;0.125;0.2462;0.25;0.4338;0.4375;0.5588;0.5625;0.7463;0.75;0.9463;0.95;1" dur="80s" repeatCount="indefinite" />
+        </text>
+      </g>
+      <!-- Cyber Shield Progress Bar Track -->
+      <rect x="14" y="90" width="290" height="7" rx="3.5" fill="#070a0e" stroke="#21262d" stroke-width="0.8" />
+      <g>
+        <clipPath id="shieldBarClip">
+          <rect x="14" y="90" width="290" height="7" rx="3.5" />
+        </clipPath>
+        <g clip-path="url(#shieldBarClip)">
+          <rect x="14" y="90" width="290.0" height="7" rx="3.5" fill="url(#barGradShield)">
+            <animate attributeName="width" values="290.0;287.1;290.0;287.1;290.0;287.1;284.2;287.1;290.0;290.0" keyTimes="0;0.125;0.25;0.4375;0.5625;0.75;0.825;0.8875;0.95;1" dur="80s" repeatCount="indefinite" />
+          </rect>
+          <!-- Segment dividers overlay (cyber ticks) -->
+          <path d="M 28.5 90 v 7 M 43 90 v 7 M 57.5 90 v 7 M 72 90 v 7 M 86.5 90 v 7 M 101 90 v 7 M 115.5 90 v 7 M 130 90 v 7 M 144.5 90 v 7 M 159 90 v 7 M 173.5 90 v 7 M 188 90 v 7 M 202.5 90 v 7 M 217 90 v 7 M 231.5 90 v 7 M 246 90 v 7 M 260.5 90 v 7 M 275 90 v 7 M 289.5 90 v 7" stroke="#070a0e" stroke-width="1.2" opacity="0.6" />
+        </g>
+      </g>
 
-      <!-- Metric 3: Mars Uplink Sync -->
-      <text x="14" y="132" font-size="10.5" fill="#8b949e">BEACON: <tspan fill="#39d353">SYNCHRONIZED</tspan> • <tspan fill="#f0883e">MARS-01</tspan></text>
+      <!-- Active Cyber Beacon / Illuminated Status Lamp -->
+      <g transform="translate(14, 122)">
+        <!-- Pulsing radar ring 1 -->
+        <circle cx="8" cy="8" r="4" fill="none" stroke="#00ff66" stroke-width="1.4">
+          <animate attributeName="r" values="4;14" dur="2s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.9;0" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <!-- Pulsing radar ring 2 -->
+        <circle cx="8" cy="8" r="4" fill="none" stroke="#38bdf8" stroke-width="1">
+          <animate attributeName="r" values="4;14" dur="2s" begin="1s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.7;0" dur="2s" begin="1s" repeatCount="indefinite" />
+        </circle>
+        <!-- Lamp outer glow -->
+        <circle cx="8" cy="8" r="4.5" fill="#00ff66" filter="url(#beaconGlow)">
+          <animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" repeatCount="indefinite" />
+        </circle>
+        <!-- Lamp core light -->
+        <circle cx="8" cy="8" r="2.2" fill="#ffffff" />
+        
+        <!-- Beacon text -->
+        <text x="24" y="12" font-size="10.5" fill="#8b949e">
+          BEACON LAMP: <tspan fill="#00ff66" font-weight="700">ONLINE [ACTIVE]</tspan> &#8226; <tspan fill="#f0883e">MARS-01</tspan>
+        </text>
+      </g>
     </g>
   </g>
 </svg>
