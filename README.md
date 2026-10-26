@@ -17,10 +17,7 @@
   <a href="https://github.com/Menasin" target="_blank">
     <img src="./assets/btn_website.svg" alt="Website // In Orbit" width="250" />
   </a>
-  &nbsp;
-  <a href="https://instagram.com/men4sin" target="_blank">
-    <img src="./assets/btn_instagram.svg" alt="Instagram // men4sin" width="250" />
-  </a>
+
 
 
   <br/><br/>
