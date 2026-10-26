@@ -13,15 +13,6 @@
 
   <br/><br/>
 
-  <!-- Footer Links: Blurry Glassmorphic Uplink Buttons -->
-  <a href="https://github.com/Menasin" target="_blank">
-    <img src="./assets/btn_website.svg" alt="Website // In Orbit" width="250" />
-  </a>
-
-
-
-  <br/><br/>
-
   <code>HXCB // SECURING THE GRID • PINGING FROM MARS</code>
 
 </div>
