@@ -21,10 +21,7 @@
   <a href="https://instagram.com/men4sin" target="_blank">
     <img src="./assets/btn_instagram.svg" alt="Instagram // men4sin" width="250" />
   </a>
-  &nbsp;
-  <a href="https://youtube.com/@Men4sin" target="_blank">
-    <img src="./assets/btn_youtube.svg" alt="YouTube // @Men4sin" width="250" />
-  </a>
+
 
   <br/><br/>
 
