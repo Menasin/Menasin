@@ -2,7 +2,7 @@ name: Update Streak Telemetry
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Every day at 00:00 UTC
+    - cron: '0 */2 * * *' # Runs every 2 hours (12 times a day)
   push:
     branches:
       - main
