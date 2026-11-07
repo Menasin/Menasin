@@ -232,7 +232,7 @@
 
   <!-- ================= COLUMN 1: TOTAL CONTRIBUTIONS ================= -->
   <g transform='translate(82.5, 48)'>
-    <text x='0' y='32' class='bold-num'>52</text>
+    <text x='0' y='32' class='bold-num'>59</text>
   </g>
   <g transform='translate(82.5, 84)'>
     <text x='0' y='32' class='label-text'>Total Contributions</text>
@@ -255,13 +255,13 @@
 
   <!-- Number & Labels -->
   <g transform='translate(247.5, 48)'>
-    <text x='0' y='32' class='curr-num'>2</text>
+    <text x='0' y='32' class='curr-num'>3</text>
   </g>
   <g transform='translate(247.5, 108)'>
     <text x='0' y='32' class='curr-label'>Current Streak</text>
   </g>
   <g transform='translate(247.5, 145)'>
-    <text x='0' y='21' class='date-text'>Nov 5 - Nov 6</text>
+    <text x='0' y='21' class='date-text'>Nov 5 - Nov 7</text>
   </g>
 
   <!-- ================= COLUMN 3: LONGEST STREAK ================= -->
