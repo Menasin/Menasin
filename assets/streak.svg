@@ -232,7 +232,7 @@
 
   <!-- ================= COLUMN 1: TOTAL CONTRIBUTIONS ================= -->
   <g transform='translate(82.5, 48)'>
-    <text x='0' y='32' class='bold-num'>59</text>
+    <text x='0' y='32' class='bold-num'>62</text>
   </g>
   <g transform='translate(82.5, 84)'>
     <text x='0' y='32' class='label-text'>Total Contributions</text>
